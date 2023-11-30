@@ -1,5 +1,5 @@
 import { Inter } from "next/font/google";
-import EmpTable from "@/components/employeeTable";
+import EmpTable from "@/components/EmployeeTable";
 
 const inter = Inter({ subsets: ["latin"] });
 
