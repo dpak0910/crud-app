@@ -18,7 +18,7 @@ const fetcher = async (url: string) => {
   return data;
 };
 
-const EmpTable:React.FC = () => {
+const EmpTable: React.FC = () => {
   const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
   function handleViewDetails(employee: any) {
     console.log(employee);
@@ -38,17 +38,17 @@ const EmpTable:React.FC = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `https://f91a-2402-4cc0-2307-c3-94dd-604-2466-b58f.ngrok.io/rest/employee`
+          `https://2c41-2402-4cc0-2307-c3-94dd-604-2466-b58f.ngrok.io/rest/employee`
         );
-        // setData(response);
-        console.log(response);
+        setData(response.data);
+        console.log(data);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
 
     fetchData();
-  }, []);
+  }, [data]);
   return (
     <Table className="border border-gray-400 rounded-t-lg">
       <TableHeader className="rounded-t-lg">
